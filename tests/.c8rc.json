@@ -1,0 +1,8 @@
+{
+  "exclude": [
+    "src/.internal/**",
+    "**/*.test.js",
+    "tests/**",
+    "coverage/**"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "software-testing-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "coverage": "node --experimental-vm-modules node_modules/c8/bin/c8.js -r text -r lcov --exclude \"src/.internal/**\" --exclude \"tests/**\" npm test"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "c8": "^10.1.3",
+    "chai": "^6.2.1",
+    "jest": "^30.2.0"
+  }
+}
