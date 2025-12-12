@@ -23,12 +23,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
-          
+
       - name: Upgrade npm (for Node 14 lockfile support)
         run: npm i -g npm@8
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run unit tests
         run: npm test
