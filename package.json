@@ -6,7 +6,26 @@
   "type": "module",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "coverage": "node --experimental-vm-modules node_modules/c8/bin/c8.js -r text -r lcov --exclude \"src/.internal/**\" --exclude \"tests/**\" npm test"
+    "coverage": "node --experimental-vm-modules node_modules/c8/bin/c8.js npm test"
+  },
+  "c8": {
+    "reporter": ["text", "lcov"],
+    "include": [
+      "src/add.js",
+      "src/capitalize.js",
+      "src/countBy.js",
+      "src/difference.js",
+      "src/drop.js",
+      "src/filter.js",
+      "src/get.js",
+      "src/isEmpty.js",
+      "src/isObjectLike.js",
+      "src/toNumber.js"
+    ],
+    "exclude": [
+      "src/.internal/**",
+      "tests/**"
+    ]
   },
   "author": "",
   "license": "MIT",
