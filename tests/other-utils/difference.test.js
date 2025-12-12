@@ -22,7 +22,7 @@
 //   });
 // });
 import { expect } from 'chai';
-import difference from "../src/difference.js";
+import difference from "../../src/difference.js";
 
 describe("difference()", () => {
 
