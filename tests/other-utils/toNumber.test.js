@@ -34,8 +34,9 @@ test("object with valueOf returning object -> forces `${other}` branch", () => {
     expect(Number.isNaN(toNumber(undefined))).toBe(true);
   });
 
-  test("preserves -0 when value === 0 branch", () => {
-    expect(Object.is(toNumber(-0), -0)).toBe(true);
+  test("preserves -0 through non-string path (covers value===0 branch at line 56)", () => {
+    const obj = { valueOf: () => -0 };
+    expect(Object.is(toNumber(obj), -0)).toBe(true);
   });
 
   test("trims whitespace in strings", () => {
