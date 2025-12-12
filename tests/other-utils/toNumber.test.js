@@ -68,4 +68,10 @@ test("object with valueOf returning object -> forces `${other}` branch", () => {
 
   expect(toNumber(obj)).toBe(8);
 });
+test("covers line 53 true-branch: valueOf returns object -> `${other}`", () => {
+  const other = { toString: () => "7" };   // object => isObject(other) true
+  const obj = { valueOf: () => other };
+
+  expect(toNumber(obj)).toBe(7);
+});
 });
