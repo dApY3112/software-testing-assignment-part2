@@ -15,9 +15,12 @@ describe("toNumber - extra branch coverage", () => {
     expect(toNumber(obj)).toBe(42);
   });
 
-test("object with valueOf returning object -> string coercion path", () => {
+test("object with valueOf returning object -> forces `${other}` branch", () => {
+  const other = Object.create(null);
+  other.toString = () => "7";
+
   const obj = {
-    valueOf: () => ({ toString: () => "7" }), // <- toString nằm trên `other`
+    valueOf: () => other, // other là object => isObject(other) === true
   };
 
   expect(toNumber(obj)).toBe(7);
