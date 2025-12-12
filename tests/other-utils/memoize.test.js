@@ -1,5 +1,5 @@
 import memoize from "../../src/memoize.js";
-
+import { jest } from "@jest/globals";
 describe("memoize", () => {
   test("memoizes function results", () => {
     const fn = jest.fn((x) => x * 2);

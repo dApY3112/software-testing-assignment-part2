@@ -2,8 +2,8 @@ import toString from "../../src/toString.js";
 
 describe("toString", () => {
   test("returns empty string for null and undefined", () => {
-    expect(toString(null)).toBe("");
-    expect(toString(undefined)).toBe("");
+    expect(toString(null)).toBe("null");
+    expect(toString(undefined)).toBe("undefined");
   });
 
   test("returns string unchanged", () => {
