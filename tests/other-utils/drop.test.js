@@ -22,3 +22,10 @@ describe("drop", () => {
     expect(drop([1, 2, 3], -2)).toEqual([1, 2, 3]);
   });
 });
+test("null array returns empty array", () => {
+  expect(drop(null)).toEqual([]);
+});
+
+test("empty array returns empty array", () => {
+  expect(drop([])).toEqual([]);
+});

@@ -15,15 +15,14 @@ describe("toNumber - extra branch coverage", () => {
     expect(toNumber(obj)).toBe(42);
   });
 
-  test("object with valueOf returning object -> string coercion path", () => {
-    // valueOf returns an object => isObject(other) true => value becomes `${other}`
-    const obj = {
-      valueOf: () => ({ a: 1 }),
-      toString: () => "7",
-    };
-    // `${other}` will call toString() => "7"
-    expect(Number.isNaN(toNumber(obj))).toBe(true);
-  });
+test("object with valueOf returning object -> string coercion path", () => {
+  const obj = {
+    valueOf: () => ({ toString: () => "7" }), // <- toString nằm trên `other`
+  };
+
+  expect(toNumber(obj)).toBe(7);
+});
+
 
   test("non-string non-number conversion uses unary plus", () => {
     expect(toNumber(true)).toBe(1);
