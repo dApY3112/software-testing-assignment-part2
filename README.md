@@ -2,7 +2,7 @@
 
 ## Purpose of this Repository
 
-This repository is based on the **official student template** for the Software Testing course at **Tampere University**.  
+This repository is based on the **official student template** for the Software Testing course.  
 The purpose of this assignment is to practice **unit testing**, **branch coverage analysis**, and **test quality evaluation** using **Jest** and **Coveralls**.
 
 The repository contains only:
