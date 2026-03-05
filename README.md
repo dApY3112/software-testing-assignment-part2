@@ -87,8 +87,7 @@ Certain branches (e.g. Node-specific Buffer detection or environment-based featu
 These cases are intentionally left as-is to comply with the assignment rules and software license.
 Author
 
-Student:Tin Nguyen, Nguyen Ngo
+Student:Nguyen Ngo
 
 Course: Software Testing
 
-University: Tampere University
